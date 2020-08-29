@@ -65,8 +65,9 @@ class Solution:
         return longest
 
     ''' 
-    Next two functions use Center method
-    
+    Next two functions use the method of searching for longest palindromes
+    from varying center positions
+    Space: O(n)
     '''
     def getPalindromesFromCenter(self, s):
         longest = ''

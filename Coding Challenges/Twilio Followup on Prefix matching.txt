@@ -1,0 +1,9 @@
+1. O(n.k + i) where n = number of numbers and k = max length of a number, i = number of prefixes.
+
+n.k is for checking the different lengths of prefixes (up to 'k') for each of the 'n' numbers. Lookup of the prefix takes only O(1) since it is in a hashmap.
+
+i is for initially storing the prefixes in a hashmap.
+
+2. A more optimal solution would make use of tries. we wouldn't need to slice the number again and again for prefixes. We can just loop each number and check how far the suffix goes on the trie.
+
+3. Tries are better for cases when we have a lot of similar long prefixes, like '1234567', '1234568', 1234569', etc.

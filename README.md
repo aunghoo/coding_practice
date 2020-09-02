@@ -28,8 +28,8 @@ Binary
 
 Dynamic Programming
 
-- [ ] Climbing Stairs - https://leetcode.com/problems/climbing-stairs/
-- [X] Coin Change - https://leetcode.com/problems/coin-change/
+- [X] Climbing Stairs - https://leetcode.com/problems/climbing-stairs/
+- [ ] Coin Change - https://leetcode.com/problems/coin-change/
 - [ ] Longest Increasing Subsequence - https://leetcode.com/problems/longest-increasing-subsequence/
 - [ ] Longest Common Subsequence -
 - [X] Word Break Problem - https://leetcode.com/problems/word-break/
@@ -91,7 +91,7 @@ String
 - [ ] Longest Repeating Character Replacement - https://leetcode.com/problems/longest-repeating-character-replacement/
 - [ ] Minimum Window Substring - https://leetcode.com/problems/minimum-window-substring/
 - [ ] Valid Anagram - https://leetcode.com/problems/valid-anagram/
-- [ ] Group Anagrams - https://leetcode.com/problems/group-anagrams/
+- [X] Group Anagrams - https://leetcode.com/problems/group-anagrams/
 - [ ] Valid Parentheses - https://leetcode.com/problems/valid-parentheses/
 - [ ] Valid Palindrome - https://leetcode.com/problems/valid-palindrome/
 - [X] Longest Palindromic Substring - https://leetcode.com/problems/longest-palindromic-substring/

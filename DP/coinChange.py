@@ -1,26 +1,28 @@
-import sys
-# brute force recursive solution
-def coinChangeBruteForce(target, coins):
-    if target == 0:
-        return 0
-    minChange = sys.maxint
-    for c in coins:
-        if target - c >= 0:
-            # optimal change required if we use the current coin
-            changeRequired = coinChangeBruteForce(target - c, coins)
-            # if optimal change is best, use the current coin
-            if changeRequired < minChange:
-                minChange = changeRequired
-    # counting one for the best coin
-    return minChange + 1
-
-print coinChangeBruteForce(13, [1, 5, 7])
-
+'''
+https://leetcode.com/problems/coin-change
 '''
 
-test cases:
-1, 3, 5, target = 9
-1 (optimal remaining num of coins)
-3 (optimal)
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        if amount == 0:
+            return 0
+        mem = {}
+        return self.memoizedCoinChange(coins, amount, mem)
 
-'''
+    def memoizedCoinChange(self, coins, amount, mem):
+        if amount in mem:
+            return mem[amount]
+        minimum = float('inf')
+        for c in coins:
+            if c == amount:
+                mem[amount] = 1
+                return 1
+            if c < amount:
+                minimum_for_remainder = self.memoizedCoinChange(coins, amount - c, mem)
+                if minimum_for_remainder != -1 and minimum_for_remainder < minimum:
+                    minimum = minimum_for_remainder
+        if minimum != float('inf'):
+            mem[amount] = minimum + 1
+            return minimum + 1
+        mem[amount] = -1
+        return -1

@@ -42,6 +42,10 @@ class Solution:
             table[l][r] = self.isPalindrome(s, l+1, r-1, table)
             return table[l][r]
 
+    ''' ========================
+    Next function makes use of dynamic programming bottom up approach
+    Space: O(n^2)
+    '''
     def dpPalindrome(self, s):
         table = [[-1] * len(s) for i in range(len(s))]
         longest = ''
@@ -64,9 +68,10 @@ class Solution:
                     longest = s[l:r+1]
         return longest
 
-    ''' 
+    ''' ========================
     Next two functions use the method of searching for longest palindromes
     from varying center positions
+    Time: O((2n+1)^2)
     Space: O(n)
     '''
     def getPalindromesFromCenter(self, s):

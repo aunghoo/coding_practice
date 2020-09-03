@@ -3,22 +3,20 @@ https://leetcode.com/problems/longest-increasing-subsequence
 '''
 
 # O(n^2) solution
-class Solution(object):
-    def lengthOfLIS(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        if len(nums) == 0:
-            return 0
-        lengths = [1 for i in range(len(nums))]
-        for cur in reversed(range(len(nums))):
-            maxForCur = 0
-            for j in range(cur, len(nums)):
-                if nums[j] > nums[cur] and lengths[j] > maxForCur:
-                    maxForCur = lengths[j]
-            lengths[cur] = maxForCur + 1
-        return max(lengths)
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
+        mem = [[0] * len(nums) for i in range(len(nums))]
+        highest_global = 0
+        for c in range(len(nums)):
+            highest = 1
+            for prev in range(c):
+                if nums[c] > nums[prev] and mem[prev] + 1 > highest:
+                    highest = mem[prev] + 1
+            mem[c] = highest
+            if highest > highest_global:
+                highest_global = highest
+        return highest_global
+
 
 # O(n log n) Solution
 def lengthOfLIS(nums):

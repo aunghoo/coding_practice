@@ -9,14 +9,10 @@ class Solution:
         if len(nums) == 1:
             return nums[0]
         needsAlt = False
-        bestWithFirst, adjWithFirst = self.getBest(nums)
-        # This means that the last house was robbed (meaning there is a possible cycle)
-        # So try again by excluding the very first house
-        if bestWithFirst != adjWithFirst:
-            slicedNums = nums[1:]
-            bestWithoutFirst, adjWithoutFirst = self.getBest(slicedNums)
-            return max(bestWithoutFirst, adjWithFirst)
-        return bestWithFirst
+        bestWithFirst = self.getBest(nums[:-1])
+        bestWithoutFirst = self.getBest(nums[1:])
+        # compare and return the better one
+        return max(bestWithFirst, bestWithoutFirst)
 
     def getBest(self, nums):
         prevBest = 0
@@ -26,7 +22,7 @@ class Solution:
             currentBest = max(prevBest + n, adjBest)
             prevBest = adjBest
             adjBest = currentBest
-        return adjBest, prevBest
+        return adjBest
         '''
         2,4,3,5,6
         '''

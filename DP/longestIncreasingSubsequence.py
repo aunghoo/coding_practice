@@ -18,14 +18,4 @@ class Solution:
         return highest_global
 
 
-# O(n log n) Solution
-def lengthOfLIS(nums):
-    if len(nums) == 0:
-            return 0
-        sequence =[]
-        for n in nums:
-            if not sequence or sequence[-1] < n:
-                sequence.append(n)
-            else:
-                sequence[bisect.bisect_left(sequence, n)] = n
-        return len(sequence)
+# Needs to figure out O(n log n) Solution

@@ -57,7 +57,7 @@ Graph
 
 Interval
 
-- [ ] Insert Interval - https://leetcode.com/problems/insert-interval/
+- [X] Insert Interval - https://leetcode.com/problems/insert-interval/
 - [ ] Merge Intervals - https://leetcode.com/problems/merge-intervals/
 - [ ] Non-overlapping Intervals - https://leetcode.com/problems/non-overlapping-intervals/
 - [ ] Meeting Rooms (Leetcode Premium) - https://leetcode.com/problems/meeting-rooms/

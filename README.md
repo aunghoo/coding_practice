@@ -103,7 +103,7 @@ String
 Tree
 
 - [X] Maximum Depth of Binary Tree - https://leetcode.com/problems/maximum-depth-of-binary-tree/
-- [ ] Same Tree - https://leetcode.com/problems/same-tree/
+- [X] Same Tree - https://leetcode.com/problems/same-tree/
 - [ ] Invert/Flip Binary Tree - https://leetcode.com/problems/invert-binary-tree/
 - [ ] Binary Tree Maximum Path Sum - https://leetcode.com/problems/binary-tree-maximum-path-sum/
 - [ ] Binary Tree Level Order Traversal - https://leetcode.com/problems/binary-tree-level-order-traversal/

@@ -5,8 +5,6 @@ class Solution:
     def trap(self, height: List[int]) -> int:
         # Find trapped waters, going from left to right
         trapped_water = 0
-        current = 0
-        trapped_sofar = 0
         l, r = 0, len(height)-1
         max_left, max_right = 0, 0
         while l < r:

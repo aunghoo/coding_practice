@@ -1,3 +1,6 @@
+''' Hard
+https://leetcode.com/problems/trapping-rain-water/
+'''
 class Solution:
     def trap(self, height: List[int]) -> int:
         # Find trapped waters, going from left to right
